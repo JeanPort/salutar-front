@@ -1,0 +1,24 @@
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class TokenService {
+
+  constructor(private router: Router) { }
+
+  public getTokenHeader() {
+
+    let token = localStorage.getItem("SalutarTK") || "";
+
+    if (token == "") {
+      this.router.navigate(['/']);
+    }
+    let header = {
+      "Authorization" : token
+    }
+
+    return header;
+  }
+}
