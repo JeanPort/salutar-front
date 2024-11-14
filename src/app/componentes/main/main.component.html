@@ -21,7 +21,7 @@
   <hr>
   <div class="row" *ngFor="let item of fichas">
     <div class="col-12">
-      {{item.nome}}
+      <a [routerLink]="['/ficha', item.idFicha]">{{item.nome}}</a>
     </div>
   </div>
 </div>

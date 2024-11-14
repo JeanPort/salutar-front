@@ -1,0 +1,16 @@
+
+#foto{
+  border-radius: 50%;
+}
+
+section{
+  margin-top: 8em;
+}
+
+#salvar{
+  position: fixed;
+  z-index: 2;
+  bottom: 2em;
+  right: 2em;
+  border-radius: 50%;
+}

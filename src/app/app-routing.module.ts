@@ -7,7 +7,7 @@ import { FichapacienteComponent } from './componentes/fichapaciente/fichapacient
 const routes: Routes = [
   {path:"", component: LoginComponent},
   {path:"main", component: MainComponent},
-  {path:"ficha", component:FichapacienteComponent}
+  {path:"ficha/:id", component:FichapacienteComponent}
 
 ];
 

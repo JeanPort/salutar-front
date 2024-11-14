@@ -36,6 +36,6 @@ export class MainComponent implements OnInit{
   }
 
   public adicionarFicha(): void{
-    this.router.navigate(['ficha'])
+    this.router.navigate(['ficha/NOVA'])
   }
 }

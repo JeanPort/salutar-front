@@ -17,4 +17,16 @@ export class FichaService {
     let header = this.tokenService.getTokenHeader();
     return this.http.get<FichaPaciente[]>(environment.apiURL+"/fichas/busca?nome="+nome, {headers: header});
   }
+
+  public cadastrarFicha(ficha: FichaPaciente): Observable<FichaPaciente>{
+    let header = this.tokenService.getTokenHeader();
+
+    return this.http.post<FichaPaciente>(environment.apiURL+"/fichas", ficha, {headers: header});
+  }
+
+  public atualizarFicha(ficha: FichaPaciente): Observable<FichaPaciente>{
+    let header = this.tokenService.getTokenHeader();
+
+    return this.http.put<FichaPaciente>(environment.apiURL+"/fichas/"+ficha.idFicha, ficha, {headers: header});
+  }
 }
