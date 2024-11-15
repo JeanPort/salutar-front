@@ -1,3 +1,5 @@
+import { Midia } from "./Midia"
+
 export class FichaPaciente {
   idFicha: number = 0
   nome: string = ""
@@ -18,6 +20,7 @@ export class FichaPaciente {
   condutaClinica: string = ""
   diagnostico: string = ""
   uuid:  string = ""
-  linkFoto: string = "assets/avatar.png"
+  linkFoto: string = "/assets/avatar.png"
   ativo: number = 0
+  midias: Midia[] = [];
 }
